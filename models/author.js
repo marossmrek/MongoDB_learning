@@ -3,14 +3,15 @@ const Schema = mongoose.Schema;
 
 // Create a Schema and a Model
 
-const BookSchema = new Schema({
+const BooksSchema = new Schema({
     title: String,
     pages: Number
 });
 
 const AuthorSchema = new Schema({
     name: String,
-    books: [BookSchema]
+    age: Number,
+    books:[BooksSchema]
 });
 
 const Author = mongoose.model('author', AuthorSchema);
